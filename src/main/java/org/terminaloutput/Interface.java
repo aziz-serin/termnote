@@ -1,23 +1,19 @@
 package org.terminaloutput;
 
 import org.filehandle.File;
-
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
 
 public class Interface {
 
-    private String fileName;
+    private static final String fileName = "src/main/resources/notes.txt";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
     private File file;
 
-    public Interface(String fileName){
-        this.fileName = fileName;
+    public Interface(){
         this.file = new File();
         this.file.readNotes(fileName);
     }
