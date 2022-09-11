@@ -10,6 +10,7 @@ import java.util.List;
 public class File {
     private List<String> notes;
 
+    public File(){}
     public void readNotes(String filename) {
         notes = new ArrayList<>();
         try{
@@ -26,12 +27,7 @@ public class File {
     }
 
     public boolean isEmpty(){
-        if(this.notes.isEmpty()){
-            System.out.println("Your notes seems to be empty, you can add some if you want!");
-            return true;
-        }
-        return false;
-
+        return this.notes.isEmpty();
     }
 
     public void addNotes(String str){
@@ -51,11 +47,22 @@ public class File {
         try{
             FileWriter writer = new FileWriter(filename);
             for(String note : this.notes){
-                writer.write(note);
+                writer.write(note + "\n");
             }
             writer.close();
         }catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    public List<String> getNotes(){
+        return this.notes;
+    }
+
+    public void setNotes(List<String> notes){
+        this.notes = notes;
+    }
+
+    public int getSize(){
+        return this.notes.size();
     }
 }

@@ -1,7 +1,9 @@
 package org.termnote;
+import org.terminaloutput.Interface;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Interface anInterface = new Interface();
+        anInterface.start();
     }
 }
