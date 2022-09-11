@@ -6,15 +6,16 @@ import java.util.Scanner;
 
 public class Interface {
 
-    private static final String fileName = "src/main/resources/notes.txt";
+    private String fileName;
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
     private File file;
 
-    public Interface(){
+    public Interface(String fileName){
         this.file = new File();
+        this.fileName = fileName;
         this.file.readNotes(fileName);
     }
 

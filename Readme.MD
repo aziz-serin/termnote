@@ -23,8 +23,10 @@ is provided under the src/main/resources/META-INF for your convenience.
 
 The intended usecase of the app is to use it as a command tool. So add 
 ```
-java -jar <$path_the_project_from_the_home_directory>/out/artifacts/termnote_jar/termnote.jar
+java -jar <$path_the_project_from_the_home_directory>/out/artifacts/termnote_jar/termnote.jar <$path_to_notes.txt>
 ```
 to your .zshrc or .bashrc file as an alias, and use the app from any directory you are
-with the alias!
+with the alias! 
+#### Note:
+When you add the alias, make sure the path starts from the home directory <b> for the notes.txt file too (just like the jar file)!
 </p>
